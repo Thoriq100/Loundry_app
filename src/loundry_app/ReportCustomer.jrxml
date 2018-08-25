@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="82506a79-8efc-4436-93fa-d2a45bd25853">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from coba1]]>
+	</queryString>
+	<field name="NAMA_CUSTOMER" class="java.lang.String"/>
+	<field name="TGL_TRANSAKSI" class="java.sql.Timestamp"/>
+	<field name="TOTAL_HARGA" class="java.lang.String"/>
+	<field name="BERAT_BAJU" class="java.math.BigDecimal"/>
+	<field name="NAMA_PAKET" class="java.lang.String"/>
+	<field name="NAMA_ADMIN" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="169" splitType="Stretch">
+			<staticText>
+				<reportElement x="174" y="10" width="277" height="59" uuid="c7163d3f-4a9e-4299-87f4-20a4947ae393"/>
+				<textElement>
+					<font fontName="Goudy Stout" size="36" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ORANGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="69" width="142" height="29" uuid="39c38680-974e-4cc0-ae35-78b435aa16cb"/>
+				<textElement>
+					<font fontName="Goudy Stout" size="14" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Loundry]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="150" height="169" uuid="28c8b66b-8ecb-45c1-973a-0eca45e998d8"/>
+				<imageExpression><![CDATA["C:\\Users\\Toriq\\Documents\\NetBeansProjects\\Loundry_app\\src\\icon\\data.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="351" y="109" width="144" height="20" uuid="2abeadb7-d51b-43a7-95eb-75f011f0d1f4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[JL Keputih Makam no 14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="129" width="100" height="20" uuid="65048097-c8f2-4389-80c2-6162136fd3aa"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[081334325459]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="149" width="74" height="20" uuid="b95d890a-546f-42b9-bc50-639e555a0b40"/>
+				<text><![CDATA[Tanggal     :]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="425" y="149" width="100" height="20" uuid="a0da286c-fefb-489f-a5cb-efacbe4ef1c9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="203" splitType="Stretch">
+			<staticText>
+				<reportElement x="74" y="29" width="100" height="20" uuid="f5d33db3-2372-49d0-9153-eddb56dde7c2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Customer]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="551" height="1" uuid="4ebdbd08-f471-4f6a-b2b5-e4d777e265b4"/>
+			</line>
+			<staticText>
+				<reportElement x="74" y="65" width="100" height="20" uuid="4553066c-6334-4931-bf02-a64bbc255e23"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Paket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="97" width="100" height="20" uuid="4d2f403a-f055-4147-80f1-0dc0a51be877"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Berat Baju]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="135" width="100" height="20" uuid="86fb8407-1037-4314-a56a-4ad1c9d40d20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tgl Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="1" width="100" height="20" uuid="58ffbea7-58f5-4c0f-9e19-139d639d267a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Kasir     :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="425" y="0" width="100" height="20" uuid="d9c9a7f3-6343-4162-93a4-501cf977e56e"/>
+				<textFieldExpression><![CDATA[$F{NAMA_ADMIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="29" width="100" height="20" uuid="dfd81702-d4a9-42f2-946f-f5763b0ab3ae"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAMA_CUSTOMER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="65" width="100" height="20" uuid="5c9f77c1-de3e-400f-aa39-31e74c8435c2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAMA_PAKET}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="97" width="23" height="20" uuid="9efd4a6b-07bb-464e-b0e4-0509adb44187"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BERAT_BAJU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="135" width="100" height="20" uuid="8403047a-9d4c-44d5-8c08-cddf834ced54"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGL_TRANSAKSI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="196" y="29" width="29" height="20" uuid="082f4f3e-0693-4fff-94a3-bbeec26d283b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="65" width="29" height="20" uuid="adc7f17f-313b-451c-a135-23d887f0c775"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="97" width="29" height="20" uuid="424dd3cf-7ccb-4aa4-af1f-d0c3e0aa033d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="135" width="29" height="20" uuid="0fa22af0-0b90-48f9-81ff-0f4bec88a3a5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="183" width="100" height="20" uuid="2dc96e98-1fe1-4502-9c6a-e1a102aa47b8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Biaya   :  Rp]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="183" width="100" height="20" uuid="425cd05c-5f3e-40af-8403-448d06535184"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_HARGA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="551" y="1" width="1" height="202" uuid="ab541c29-a8ef-4006-998c-89f154e94cdb"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="202" uuid="67343552-b2b5-440a-b2c4-3cd639d6dabb"/>
+			</line>
+			<staticText>
+				<reportElement x="285" y="97" width="53" height="20" uuid="3a1f3403-168a-4057-8636-b76abed33b0e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Kg]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="62" y="11" width="433" height="20" uuid="109091a4-fd8c-459e-a7b1-aa8dccf485a4"/>
+				<textElement>
+					<font fontName="Blackoak Std" size="14"/>
+				</textElement>
+				<text><![CDATA[******** TERIMA KASIH ******]]></text>
+			</staticText>
+			<line>
+				<reportElement x="48" y="0" width="100" height="1" uuid="a6b64c8e-982a-404e-b0e5-889569318f9b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="551" height="1" uuid="ab0ccf89-b544-4b2a-bbd4-430c27dc0652"/>
+			</line>
+		</band>
+	</columnHeader>
+</jasperReport>

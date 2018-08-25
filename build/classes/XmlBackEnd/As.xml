@@ -1,0 +1,12 @@
+<?xml version="1.0"?><!-- iReport connections -->
+<iReportConnectionSet>
+	<iReportConnection name="Kon" connectionClass="com.jaspersoft.ireport.designer.connection.JDBCConnection">
+		<connectionParameter name="Username"><![CDATA[apploundry]]></connectionParameter>
+		<connectionParameter name="SavePassword"><![CDATA[true]]></connectionParameter>
+		<connectionParameter name="Database"><![CDATA[]]></connectionParameter>
+		<connectionParameter name="ServerAddress"><![CDATA[]]></connectionParameter>
+		<connectionParameter name="JDBCDriver"><![CDATA[oracle.jdbc.driver.OracleDriver]]></connectionParameter>
+		<connectionParameter name="Url"><![CDATA[jdbc:oracle:thin:@localhost:1521:orcl]]></connectionParameter>
+		<connectionParameter name="Password"><![CDATA[loundry]]></connectionParameter>
+	</iReportConnection>
+</iReportConnectionSet>
